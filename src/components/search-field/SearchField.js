@@ -1,20 +1,45 @@
 import React, {Component} from 'react';
-import {apiKey} from '../../constants/Index'
+import {connect} from "react-redux";
+import {searchMovie, fetchMovies} from "../../actions/searchActions";
 
-export const SearchField =(props)=>{
-        return (
+class SearchField extends Component{
+
+    onChange = e =>{
+        this.props.searchMovie(e.target.value)
+    }
+
+    onSubmit = e =>{
+        e.preventDefault()
+        this.props.fetchMovies(this.props.text)
+    }
+
+render(){
+               return (
             <div className="container">
                 <div className="row">
                     <section className="col s4 offset-s4">
-                        <form action="" onSubmit={props.handleSubmit}>
+                        <form id='searchForm' action="" onSubmit={this.onSubmit}>
                             <div className="input-field">
-                                <input placeholder='Search movie' type="text" onChange={props.handleChange}/>
+                                <input
+                                    placeholder='Search movie'
+                                    type="text"
+                                    name='searchText'
+                                    onChange={this.onChange}/>
                             </div>
+                            <button type='submit' className='btn btn-primary btn-bg mt-3'>Search</button>
                         </form>
                     </section>
                 </div>
             </div>
         );
+}
+
 
 }
 
+const mapStateToProps = state =>({
+
+    text: state.movies.text
+}
+)
+export default connect(mapStateToProps,{searchMovie,fetchMovies})(SearchField)

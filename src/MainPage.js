@@ -2,8 +2,11 @@ import React, {Component} from 'react';
 
 import {MoviesList} from "./components/movies-list/MoviesList";
 import {Header} from "./components/header/Header";
-import {apiKey} from "./constants/Index";
-import {SearchField} from "./components/search-field/SearchField";
+import {apiKey} from "./constants";
+import SearchField from "./components/search-field/SearchField";
+import {Footer} from "./components/footer/Footer";
+import Landing from "./components/landing/Landing";
+
 
 class MainPage extends Component {
     constructor() {
@@ -23,7 +26,7 @@ class MainPage extends Component {
                 console.log(this.movies)
             })
     }
-    handleChange = (event) => {
+    onChange = (event) => {
         this.setState({
             searchTerm: event.target.value
         })
@@ -32,9 +35,11 @@ class MainPage extends Component {
     render() {
         return (
             <div>
-                <Header/>
-                <SearchField handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>
-                <MoviesList movies={this.state.movies}/>
+                <Header />
+                {/*<SearchField handleSubmit={this.handleSubmit} handleChange={this.onChange}/>*/}
+                <Landing/>
+                {/*<MoviesList movies={this.state.movies}/>*/}
+                <Footer/>
             </div>
 
 
