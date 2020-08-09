@@ -1,0 +1,90 @@
+.movie-container {
+  width: 1000px;
+  margin: 30px auto;
+}
+
+.movieCard {
+  border: 1px solid rgba(245, 245, 245, 0.699);
+  border-radius: 13px;
+  background: #ffffff;
+  box-shadow: 10px 10px 45px #f2f2f2, -10px -10px 45px #ffffff;
+  padding: 20px;
+
+  &-header {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+
+  &-content {
+    display: flex;
+    &-image > img {
+      width: 400px;
+      height: auto;
+      border-radius: 5px;
+      margin-right: 15px;
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &-originalTitle {
+        color: #674794;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      &-releaseDate {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      &-adultsSector {
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: darkred;
+      }
+
+      &-genres {
+        margin-bottom: 15px;
+      }
+
+      &-language {
+        font-weight: bold;
+        color: #52a360;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      &-overview {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 30px;
+      }
+
+      &-rating {
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.movieCard-buttons {
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-end;
+}
+
+.original-title {
+  color: black;
+  font-weight: normal;
+}
+
+.original-language {
+  color: black;
+  font-weight: normal;
+}

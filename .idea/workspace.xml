@@ -1,9 +1,169 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="eaaab923-fe04-4a31-9fc1-81ed8c9c26fa" name="Default Changelist" comment="test1">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/getGenres.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/getMovieFromId.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/movie-card/MovieCard.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/movie-page/MoviePage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/movie-page/MoviePage.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/MoviePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action-types/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/action-types/types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/searchActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/searchActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/movie-card/MovieCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/movie-card/MovieCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/movie-details/MovieDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/movie-details/MovieDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/movie/Movie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/movies-list/MoviesList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/movies-list/MoviesList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/searchReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/searchReducer.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="SCSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1exbokCPzydnImCnntRbJQsnVtg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../fillm-app" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RunManager" selected="npm.npm start">
+    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="npm start" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eaaab923-fe04-4a31-9fc1-81ed8c9c26fa" name="Default Changelist" comment="" />
+      <created>1595266367615</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1595266367615</updated>
+      <workItem from="1595266369680" duration="600000" />
+      <workItem from="1595314041114" duration="7559000" />
+      <workItem from="1595434330690" duration="27981000" />
+      <workItem from="1596351238921" duration="8489000" />
+      <workItem from="1596381012841" duration="10791000" />
+      <workItem from="1596472118189" duration="12600000" />
+      <workItem from="1596646968587" duration="9534000" />
+      <workItem from="1596740097506" duration="35922000" />
+    </task>
+    <task id="LOCAL-00001" summary="test1">
+      <created>1595531874230</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1595531874231</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Poster done">
+      <created>1596386588811</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1596386588811</updated>
+    </task>
+    <task id="LOCAL-00003" summary="test1">
+      <created>1596969684258</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1596969684258</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Poster done" />
+    <MESSAGE value="test1" />
+    <option name="LAST_COMMIT_MESSAGE" value="test1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="401" y="150" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595534425939">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="401" y="150" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1595534425939" />
+    <state x="371" y="90" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596985553416">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="371" y="90" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1596985553416" />
+    <state x="277" y="0" key="CommitChangelistDialog2" timestamp="1596969682097">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="277" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1596969682097" />
+    <state x="282" y="140" key="EditFileWatcherDialog" timestamp="1595323463428">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="282" y="140" key="EditFileWatcherDialog/0.0.1280.680@0.0.1280.680" timestamp="1595323463428" />
+    <state x="421" y="98" key="FileChooserDialogImpl" timestamp="1596967556580">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="98" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1596967556580" />
+    <state x="233" y="65" key="Vcs.Push.Dialog.v2" timestamp="1596386607704">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="65" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1596386607704" />
+    <state x="349" y="168" key="com.intellij.ide.util.TipDialog" timestamp="1596646969394">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="349" y="168" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1596646969394" />
   </component>
 </project>

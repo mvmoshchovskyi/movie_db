@@ -1,4 +1,4 @@
-import {SEARCH_MOVIE, FETCH_MOVIES, FETCH_MOVIE, LOADING, PAGINATION} from '../action-types/types'
+import {SEARCH_MOVIE, FETCH_MOVIES, FETCH_MOVIE, LOADING, PAGINATION, MOVIE_FROM_ID_LOADED} from '../action-types/types'
 
 const initialState = {
     text: '',
@@ -7,7 +7,12 @@ const initialState = {
     movie: [],
     totalResults: 0,
     currentPage: 1,
-    lastPage:0
+    lastPage: 0,
+    genres: [],
+    movieFromId: {},
+    movieList:[],
+    activePage: 1,
+    movieFromSearch: {}
 }
 
 export default function (state = initialState, action) {
@@ -43,6 +48,13 @@ export default function (state = initialState, action) {
                 ...state,
                 movies: action.payload,
                 currentPage: 1
+            }
+
+        case MOVIE_FROM_ID_LOADED:
+            return {
+                ...state,
+                loading: false,
+                movieFromId: action.payload
             }
         default:
             return state

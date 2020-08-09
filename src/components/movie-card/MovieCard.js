@@ -18,10 +18,11 @@ class MovieCard extends Component {
                     <h5 className="text-light card-title">
                         {movie.title} - {movie.release_date}
                     </h5>
-                    <Link className="btn btn-primary"   to={'/movie/ '+  movie}>
+                    <Link className="btn btn-primary"   to={`movielist/${movie.id}`}>
                         Movie Details
                         <i className="fas fa-chevron-right"/>
                     </Link>
+
                     {/*<div className='card-content'>*/}
                     {/*    <p><a href="#">view details</a></p>*/}
 
@@ -33,6 +34,10 @@ class MovieCard extends Component {
 }
 
 export default MovieCard;
+
+
+
+
 // import React from "react";
 //
 //  const MovieCard = (props) => {

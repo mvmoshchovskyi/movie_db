@@ -6,10 +6,11 @@ import SearchField from "./components/search-field/SearchField";
 import {MoviesList} from "./components/movies-list/MoviesList";
 import Landing from "./components/landing/Landing";
 import {Route} from "react-router-dom";
-import MovieDetails from "./components/movie-details/MovieDetails";
 import Pagination from "./components/pagination/Pagination";
 import SearchArea from "./components/searchArea/searchArea";
 import MovieInfo from "./components/movieInfo/MovieInfo";
+import MoviePage from "./containers/MoviePage";
+
 
 
 class MainPage extends Component {
@@ -69,12 +70,12 @@ class MainPage extends Component {
                 {/*    : <MovieInfo closeMovieInfo={this.closeMovieInfo} currentMovie={this.state.currentMovie} />}*/}
 
                 <Route exact path="/" component={Landing}/>
-                <Route exact path="/movie/:id" component={MovieDetails}/>
-                {/*<Route path="/movielist/:id"*/}
-                {/*       render={(routerProps) => {*/}
-                {/*           return (<MovieDetails {...routerProps} />)*/}
-                {/*       }}>*/}
-                {/*</Route>*/}
+
+                                <Route path="/movielist/:id"
+                                        render={(routerProps) => {
+                                                return (<MoviePage {...routerProps} />)
+                                        }} >
+                                </Route>
 
                 {/*{this.state.totalResults > 20 ? <Pagination pages={numberPages} nextPage={this.nextPage}*/}
                 {/*                                            currentPage={this.state.currentPage}/> : ''}*/}
