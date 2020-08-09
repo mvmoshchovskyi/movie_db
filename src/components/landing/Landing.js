@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import SearchField from "../search-field/SearchField";
 import {connect} from 'react-redux'
 import Spinner from "../spinner/Spinner";
-import MoviesContainer from "../MoviesContainer/MoviesContainer";
+import MoviesContainer from "../movies-container/MoviesContainer";
 
 class Landing extends Component {
     render() {

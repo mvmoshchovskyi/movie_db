@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
-import {searchMovie, fetchMovies} from "../../actions/searchActions";
+import {searchMovie, fetchMovies,setLoading} from "../../actions/searchActions";
 
 class SearchField extends Component{
 
@@ -11,6 +11,7 @@ class SearchField extends Component{
     onSubmit = e =>{
         e.preventDefault()
         this.props.fetchMovies(this.props.text)
+        this.props.setLoading()
     }
 
 render(){
@@ -42,4 +43,4 @@ const mapStateToProps = state =>({
     text: state.movies.text
 }
 )
-export default connect(mapStateToProps,{searchMovie,fetchMovies})(SearchField)
+export default connect(mapStateToProps,{searchMovie,fetchMovies,setLoading})(SearchField)
