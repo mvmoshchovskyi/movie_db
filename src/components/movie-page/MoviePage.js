@@ -1,5 +1,5 @@
-import React, {useEffect, useContext} from 'react';
-// import { ThemeContext } from '../../context';
+import React, {useEffect, } from 'react';
+
 import {Button} from 'semantic-ui-react';
 
 import {withRouter} from 'react-router';
@@ -9,11 +9,12 @@ import {Link} from "react-router-dom";
 
 function MoviePageComponent({match: {params: {id}}, movieFromId, getMovieFromId, movieFromId: {vote_average}}) {
 
-    // const { dark } = useContext(ThemeContext);
 
-    useEffect(() => {
-        getMovieFromId(id);
-    }, []);
+
+     useEffect(() => {
+                getMovieFromId(id);
+        }, []);
+
 
     const {adult, title, release_date, genres, original_language, original_title, overview, poster_path} = movieFromId;
 

@@ -8,6 +8,7 @@ import './Header.scss';
 
 export const Header = (props) => {
 
+
     return (
         <div className="header navbar">
             <div className="container">
@@ -15,6 +16,7 @@ export const Header = (props) => {
                 <div>
                     <img src={logo} className="header-logo" alt="logotype"/>
                 </div>
+
 
                 <div className="header-links-wrapper">
                     {/*{*/}

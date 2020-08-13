@@ -22,11 +22,6 @@ class MovieCard extends Component {
                         Movie Details
                         <i className="fas fa-chevron-right"/>
                     </Link>
-
-                    {/*<div className='card-content'>*/}
-                    {/*    <p><a href="#">view details</a></p>*/}
-
-                    {/*</div>*/}
                 </div>
             </div>
         );

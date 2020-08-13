@@ -1,18 +1,30 @@
-import {SEARCH_MOVIE, FETCH_MOVIES, FETCH_MOVIE, LOADING, PAGINATION, MOVIE_FROM_ID_LOADED} from '../action-types/types'
+import {
+    SEARCH_MOVIE,
+    FETCH_MOVIES,
+    LOADING,
+    PAGINATION,
+    MOVIE_FROM_ID_LOADED,
+    ACTIVE_PAGE_CHANGE,
+    GET_MOVIES
+} from '../action-types/types'
 
 const initialState = {
     text: '',
     movies: [],
     loading: false,
     movie: [],
-    totalResults: 0,
-    currentPage: 1,
     lastPage: 0,
     genres: [],
     movieFromId: {},
-    movieList:[],
+    movieList: [],
     activePage: 1,
-    movieFromSearch: {}
+    movieFromSearch: {},
+    foundMovies: [],
+    totalResults: 0,
+    currentPage: 1,
+    tvShows: [],
+    watchlist: [],
+    watchlistTVShow: [],
 }
 
 export default function (state = initialState, action) {
@@ -22,6 +34,7 @@ export default function (state = initialState, action) {
                 ...state,
                 text: action.payload,
                 loading: false,
+                foundMovies: action.payload
             }
         case FETCH_MOVIES:
             return {
@@ -30,14 +43,7 @@ export default function (state = initialState, action) {
                 loading: false,
 
             }
-        case FETCH_MOVIE:
-            return {
-                ...state,
-                movie: action.payload,
-                loading: false,
 
-
-            }
         case LOADING:
             return {
                 ...state,
@@ -56,6 +62,17 @@ export default function (state = initialState, action) {
                 loading: false,
                 movieFromId: action.payload
             }
+        case ACTIVE_PAGE_CHANGE:
+            return {
+                ...state,
+                activePage: action.payload
+            }
+        case GET_MOVIES: {
+            return {
+                ...state,
+                movies: action.payload
+            }
+        }
         default:
             return state
     }

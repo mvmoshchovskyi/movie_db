@@ -1,86 +1,96 @@
 import React, {Component} from 'react';
-
-
 import {apiKey} from "./constants";
-import SearchField from "./components/search-field/SearchField";
-import {MoviesList} from "./components/movies-list/MoviesList";
+import {BrowserRouter as Router, Route, Switch, Redirect} from "react-router-dom";
+import {connect} from 'react-redux'
 import Landing from "./components/landing/Landing";
-import {Route} from "react-router-dom";
-import Pagination from "./components/pagination/Pagination";
-import SearchArea from "./components/searchArea/searchArea";
-import MovieInfo from "./components/movieInfo/MovieInfo";
 import MoviePage from "./containers/MoviePage";
-
+import MoviesContainer from "./components/movies-container/MoviesContainer";
+import SearchField from "./components/search-field/SearchField";
 
 
 class MainPage extends Component {
-    constructor() {
-        super()
-        this.state = {
-            movies: [],
-            searchTerm: '',
-            totalResults: 0,
-            currentPage: 1,
-            currentMovie: null
+    state = {
+        isMovieSearch: false,
+        errorSearch: '',
+        searchTerm: '',
+        totalResults: 0,
+        currentPage: 1,
+    }
+
+    handleChange = (e) => {
+        this.setState({searchTerm: e.target.value})
+    }
+
+    handleSubmit = async (e) => {
+        if (this.state.searchTerm === '') return;
+        e.preventDefault()
+        const {searchMovies} = this.props;
+        this.setState({isMovieSearch: true});
+        let response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${this.state.searchTerm}`);
+        if (response.ok) {
+            let json = await response.json();
+            this.setState({totalResults: json.total_results})
+            const {results} = json;
+            if (Array.isArray(results)) {
+                this.setState({
+                    isMovieSearch: false,
+                    errorSearch: '',
+                    currentPage: 1
+                });
+                searchMovies(results)
+            } else {
+                this.setState({
+                    isMovieSearch: false,
+                    errorSearch: response.status,
+                });
+            }
         }
     }
 
-    handleSubmit = (e) => {
-        fetch(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&query=${this.state.searchTerm}&language=en-US&page=${this.state.currentPage}`)
-            .then(data => data.json())
-            .then(data => {
-                this.setState({movies: [...data.results], totalResults: data.total_results})
-            })
-
-        e.preventDefault()
-    }
-    handleChange = (event) => {
-        this.setState({
-            searchTerm: event.target.value
-        })
-    }
-
-    viewMovieInfo = (id) => {
-        const filteredMovie = this.state.movies.filter(movie => movie.id === id)
-        const newCurrentMovie = filteredMovie.length > 0 ? filteredMovie[0] : null
-        this.setState({currentMovie: filteredMovie})
+    nextPage = async (pageNumber) => {
+        window.scrollTo(0, 0);
+        const {searchMovies} = this.props;
+        let response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${this.state.searchTerm}&page=${pageNumber}`);
+        if (response.ok) {
+            let json = await response.json();
+            this.setState({totalResults: json.total_results, currentPage: pageNumber})
+            const {results} = json;
+            if (Array.isArray(results)) {
+                searchMovies(results)
+            }
+        }
     }
 
-    nextPage = (pageNumber) => {
-        fetch(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${this.state.searchTerm}&page=${pageNumber}`)
-            .then(data => data.json())
-            .then(data => {
-                this.setState({movies: [...data.results], currentPage: pageNumber})
-            })
-    }
-
-    closeMovieInfo = () => {
-        this.setState({currentMovie: null})
-    }
 
     render() {
         const numberPages = Math.floor(this.state.totalResults / 20)
         return (
             <div>
-                {/*{this.state.currentMovie = null*/}
-                {/*    ? <div>*/}
-                {/*        <SearchArea handleSubmit={this.handleSubmit} handleChange={this.handleChnge}/>*/}
-                {/*        <MoviesList viewMovieInfo={this.viewMovieInfo} movies={this.state.movies}/>*/}
-                {/*    </div>*/}
-                {/*    : <MovieInfo closeMovieInfo={this.closeMovieInfo} currentMovie={this.state.currentMovie} />}*/}
+                <Router>
+                    {/*<SearchField searchTerm={this.state.searchTerm}*/}
+                    {/*             handleSubmit={this.handleSubmit}*/}
+                    {/*             handleChange={this.handleChange}*/}
+                    {/*/>*/}
 
-                <Route exact path="/" component={Landing}/>
+                    <Switch>
+                        <Route exact path="/" component={Landing}/>
 
-                                <Route path="/movielist/:id"
-                                        render={(routerProps) => {
-                                                return (<MoviePage {...routerProps} />)
-                                        }} >
-                                </Route>
+                        <Route path="/movielist/:id"
+                               render={(routerProps) => {
+                                   return (<MoviePage {...routerProps} />)
+                               }}>
+                        </Route>
 
-                {/*{this.state.totalResults > 20 ? <Pagination pages={numberPages} nextPage={this.nextPage}*/}
-                {/*                                            currentPage={this.state.currentPage}/> : ''}*/}
+                        <Route path="/found-movies" exact>
+                            <MoviesContainer
+                            />
+
+                        </Route>
 
 
+                    </Switch>
+
+                </Router>
             </div>
 
 
@@ -88,4 +98,8 @@ class MainPage extends Component {
     }
 }
 
-export default MainPage
+const mapStateToProps = state => ({
+    foundMovies: state.movies.movies
+})
+
+export default connect(mapStateToProps,)(MainPage);

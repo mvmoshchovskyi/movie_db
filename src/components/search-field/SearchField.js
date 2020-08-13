@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
-import {searchMovie, fetchMovies,setLoading} from "../../actions/searchActions";
+import {searchMovie, fetchMovies,setLoading} from "../../actions/actions";
 
 class SearchField extends Component{
 

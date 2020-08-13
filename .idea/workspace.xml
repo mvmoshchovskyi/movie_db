@@ -1,27 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eaaab923-fe04-4a31-9fc1-81ed8c9c26fa" name="Default Changelist" comment="test1">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/getGenres.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/getMovieFromId.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/movie-card/MovieCard.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/movie-page/MoviePage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/movie-page/MoviePage.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/MoviePage.js" afterDir="false" />
+    <list default="true" id="eaaab923-fe04-4a31-9fc1-81ed8c9c26fa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/actions/actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/getMovieFromSearch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/movies.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/movies-container/MoviesContainer.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/pagination/Pagination.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/action-types/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/action-types/types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/searchActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/searchActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/getGenres.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/getGenres.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/searchActions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/landing/Landing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing/Landing.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/movie-card/MovieCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/movie-card/MovieCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/movie-details/MovieDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/movie-details/MovieDetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/movie/Movie.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/movies-list/MoviesList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/movies-list/MoviesList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/movie-page/MoviePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/movie-page/MoviePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/movieInfo/MovieInfo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/movies-container/MoviesContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/movies-container/MoviesContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/movies-list/MoviesList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pagination/Pagination.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pagination/Pagination.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/search-field/SearchField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search-field/SearchField.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/searchArea/searchArea.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/MoviePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/MoviePage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/searchReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/searchReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/searchReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +37,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="SCSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -58,7 +64,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../fillm-app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../react-may-2020" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -101,7 +107,7 @@
       <workItem from="1596381012841" duration="10791000" />
       <workItem from="1596472118189" duration="12600000" />
       <workItem from="1596646968587" duration="9534000" />
-      <workItem from="1596740097506" duration="35922000" />
+      <workItem from="1596740097506" duration="81028000" />
     </task>
     <task id="LOCAL-00001" summary="test1">
       <created>1595531874230</created>
@@ -124,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596969684258</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="done 1 etap">
+      <created>1596985651710</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1596985651710</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,29 +147,30 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Poster done" />
     <MESSAGE value="test1" />
-    <option name="LAST_COMMIT_MESSAGE" value="test1" />
+    <MESSAGE value="done 1 etap" />
+    <option name="LAST_COMMIT_MESSAGE" value="done 1 etap" />
   </component>
   <component name="WindowStateProjectService">
     <state x="401" y="150" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595534425939">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="401" y="150" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1595534425939" />
-    <state x="371" y="90" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596985553416">
+    <state x="371" y="90" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597257921566">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="371" y="90" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1596985553416" />
-    <state x="277" y="0" key="CommitChangelistDialog2" timestamp="1596969682097">
+    <state x="371" y="90" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1597257921566" />
+    <state x="277" y="0" key="CommitChangelistDialog2" timestamp="1596985649899">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="277" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1596969682097" />
+    <state x="277" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1596985649899" />
     <state x="282" y="140" key="EditFileWatcherDialog" timestamp="1595323463428">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="282" y="140" key="EditFileWatcherDialog/0.0.1280.680@0.0.1280.680" timestamp="1595323463428" />
-    <state x="421" y="98" key="FileChooserDialogImpl" timestamp="1596967556580">
+    <state x="421" y="98" key="FileChooserDialogImpl" timestamp="1596998942706">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="98" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1596967556580" />
+    <state x="421" y="98" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1596998942706" />
     <state x="233" y="65" key="Vcs.Push.Dialog.v2" timestamp="1596386607704">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
