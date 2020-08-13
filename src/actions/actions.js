@@ -1,4 +1,4 @@
-import {SEARCH_MOVIE, FETCH_MOVIES, LOADING,  GET_MOVIES} from '../action-types/types';
+import {SEARCH_MOVIE, FETCH_MOVIES, LOADING, GET_MOVIES, SEARCH_MOVIES} from '../action-types/types';
 import {apiKey} from "../constants";
 
 
@@ -40,17 +40,9 @@ export const getMovies = (movie) => {
     }
 };
 
-export const getMovieFromId = (id) => {
-
-        return async (dispatch) => {
-                return fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}`)
-                        .then(response => response.json())
-                        .then((res) => {
-                                dispatch({
-                                        type: 'MOVIE_FROM_ID_LOADED',
-                                        payload: res
-                                });
-
-                        });
-        }
-}
+export const searchMovies = (movie) => {
+    return {
+        type: SEARCH_MOVIES,
+        payload: movie
+    }
+};

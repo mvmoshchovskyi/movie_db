@@ -5,7 +5,7 @@ import {
     PAGINATION,
     MOVIE_FROM_ID_LOADED,
     ACTIVE_PAGE_CHANGE,
-    GET_MOVIES
+    GET_MOVIES, SEARCH_MOVIES
 } from '../action-types/types'
 
 const initialState = {
@@ -20,11 +20,15 @@ const initialState = {
     activePage: 1,
     movieFromSearch: {},
     foundMovies: [],
-    totalResults: 0,
-    currentPage: 1,
-    tvShows: [],
-    watchlist: [],
-    watchlistTVShow: [],
+    // totalResults: 0,
+    // currentPage: 1,
+    // tvShows: [],
+    // watchlist: [],
+    // watchlistTVShow: [],
+        isLoading: false,
+        error: '',
+        movieTotalResults: 0,
+        movieCurrentPage: 1,
 }
 
 export default function (state = initialState, action) {
@@ -71,6 +75,12 @@ export default function (state = initialState, action) {
             return {
                 ...state,
                 movies: action.payload
+            }
+        }
+        case SEARCH_MOVIES: {
+            return {
+                ...state,
+                foundMovies: action.payload
             }
         }
         default:

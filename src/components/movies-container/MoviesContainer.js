@@ -1,16 +1,24 @@
-
 import React, {Component} from 'react';
 import {connect} from "react-redux";
-import {apiKey, genresForRender} from "../../constants";
-import {getMovies} from "../../actions/actions";
-
-
+import {apiKey} from "../../constants";
+import {fetchMovies, getMovies, searchMovie, setLoading} from "../../actions/actions";
 import MovieCard from "../movie-card/MovieCard";
-import Pagination from "../pagination/Pagination";
+import Pagination from "../pagination/Pagination"
 
 import './MoviesContainer.scss';
 
 class MoviesContainer extends Component {
+    // constructor(props) {
+    //     super(props);
+    //     const {
+    //         isLoading,
+    //         error,
+    //         movieTotalResults,
+    //         movieCurrentPage
+    //     } = this.props
+    //
+    // }
+
     state = {
         isLoading: false,
         error: '',
@@ -77,7 +85,6 @@ class MoviesContainer extends Component {
                 }
 
 
-
                 <div className="card-container">
 
                     {
@@ -91,8 +98,8 @@ class MoviesContainer extends Component {
                     <Pagination
                         debugger
                         pages={movieNumberPages}
-                                nextP={this.movieNextPage}
-                                currentPage={this.state.movieCurrentPage}/>
+                        nextP={this.movieNextPage}
+                        currentPage={this.state.movieCurrentPage}/>
                 }
             </div>
         );
@@ -100,11 +107,18 @@ class MoviesContainer extends Component {
 }
 
 const mapStateToProps = state => ({
-    movies: state.movies.movies
+    movies: state.movies.movies,
+    isLoading: state.movies.isLoading,
+    error: state.movies.error,
+    movieTotalResults: state.movies.movieTotalResults,
+    movieCurrentPage: state.movies.movieCurrentPage
 })
 
 const mapDispatchToProps = ({
     getMovies,
+    searchMovie,
+    fetchMovies,
+    setLoading
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(MoviesContainer);
