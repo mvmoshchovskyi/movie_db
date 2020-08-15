@@ -5,30 +5,24 @@ import {
     PAGINATION,
     MOVIE_FROM_ID_LOADED,
     ACTIVE_PAGE_CHANGE,
-    GET_MOVIES, SEARCH_MOVIES
+    GET_MOVIES,
+    GENRES_LOADED, MOVIE_FROM_SEARCH_LOADED
+
 } from '../action-types/types'
 
 const initialState = {
     text: '',
     movies: [],
     loading: false,
-    movie: [],
-    lastPage: 0,
-    genres: [],
-    movieFromId: {},
-    movieList: [],
-    activePage: 1,
-    movieFromSearch: {},
     foundMovies: [],
-    // totalResults: 0,
-    // currentPage: 1,
-    // tvShows: [],
-    // watchlist: [],
-    // watchlistTVShow: [],
-        isLoading: false,
-        error: '',
-        movieTotalResults: 0,
-        movieCurrentPage: 1,
+    movie: [],
+    movieFromId: {},
+    activePage: 1,
+    currentPage: 1,
+
+    genresList: [],
+
+
 }
 
 export default function (state = initialState, action) {
@@ -69,21 +63,31 @@ export default function (state = initialState, action) {
         case ACTIVE_PAGE_CHANGE:
             return {
                 ...state,
-                activePage: action.payload
+                activePage: action.payload,
+                loading: false,
             }
         case GET_MOVIES: {
             return {
                 ...state,
-                movies: action.payload
+                movies: action.payload,
+                loading: false,
             }
         }
-        case SEARCH_MOVIES: {
+
+        case GENRES_LOADED:
             return {
                 ...state,
-                foundMovies: action.payload
+                genresList: action.payload,
+                // isGenresLoading: false
+                loading: false,
             }
-        }
+
+
+
         default:
             return state
     }
 }
+
+
+

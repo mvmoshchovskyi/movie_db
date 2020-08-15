@@ -1,4 +1,4 @@
-import {SEARCH_MOVIE, FETCH_MOVIES, LOADING, GET_MOVIES, SEARCH_MOVIES} from '../action-types/types';
+import {SEARCH_MOVIE, FETCH_MOVIES, LOADING, GET_MOVIES, } from '../action-types/types';
 import {apiKey} from "../constants";
 
 
@@ -33,16 +33,10 @@ export const setLoading = () => {
     }
 }
 
-export const getMovies = (movie) => {
-    return {
-        type: GET_MOVIES,
-        payload: movie
-    }
-};
+// export const getMovies = (movie) => {
+//     return {
+//         type: GET_MOVIES,
+//             payload: movie
+//     }
+// };
 
-export const searchMovies = (movie) => {
-    return {
-        type: SEARCH_MOVIES,
-        payload: movie
-    }
-};

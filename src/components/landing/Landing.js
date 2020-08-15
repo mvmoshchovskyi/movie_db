@@ -5,6 +5,7 @@ import Spinner from "../spinner/Spinner";
 import MoviesContainer from "../movies-container/MoviesContainer";
 
 
+
 class Landing extends Component {
     render() {
         const {loading}=this.props

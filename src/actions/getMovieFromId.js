@@ -1,4 +1,5 @@
 import {apiKey} from "../constants";
+import {MOVIE_FROM_ID_LOADED} from "../action-types/types";
 
 export const getMovieFromId = (id) => {
 
@@ -7,7 +8,7 @@ export const getMovieFromId = (id) => {
                         .then(response => response.json())
                         .then((res) => {
                                 dispatch({
-                                        type: 'MOVIE_FROM_ID_LOADED',
+                                        type: MOVIE_FROM_ID_LOADED,
                                         payload: res
                                 });
 

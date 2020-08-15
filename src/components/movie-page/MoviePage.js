@@ -1,9 +1,7 @@
-import React, {useEffect, } from 'react';
+import React, {useEffect} from 'react';
 
 import {Button} from 'semantic-ui-react';
-
 import {withRouter} from 'react-router';
-
 import './MoviePage.scss';
 import {Link} from "react-router-dom";
 
@@ -16,14 +14,12 @@ function MoviePageComponent({match: {params: {id}}, movieFromId, getMovieFromId,
         }, []);
 
 
-    const {adult, title, release_date, genres, original_language, original_title, overview, poster_path} = movieFromId;
+    const {adult, title, release_date, genres, original_language, original_title, overview, poster_path,popularity} = movieFromId;
 
     return (<div>
+
             <div className="container">
                 <div className="row">
-                    {/*<div className='movieCard-content-image'>*/}
-                    {/*    <img src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt='poster'></img>*/}
-                    {/*</div>*/}
                     <div className="col-md-4 card card-body">
                         <img src={`https://image.tmdb.org/t/p/w300${poster_path}`} className="thumbnail"
                              alt="Poster"/>
@@ -47,10 +43,10 @@ function MoviePageComponent({match: {params: {id}}, movieFromId, getMovieFromId,
                                 <strong>Overwiew:</strong> {overview}
                             </li>
                             <li className="list-group-item">
-                                <strong>Director:</strong>
+                                <strong>Popularity:</strong>{popularity}
                             </li>
                             <li className="list-group-item">
-                                <strong>Writer:</strong>
+                                <strong>Original_language:</strong>{original_language}
                             </li>
                             <li className="list-group-item">
                                 <strong>Actors:</strong>
@@ -93,6 +89,7 @@ function MoviePageComponent({match: {params: {id}}, movieFromId, getMovieFromId,
                 </div>
             </div>
         </div>
+
 
     )
 }
