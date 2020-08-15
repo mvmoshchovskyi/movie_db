@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
 import {searchMovie, fetchMovies,setLoading} from "../../actions/searchActions";
-import {getMovies} from "../../actions/getMovies";
-
 
 class SearchField extends Component{
 
@@ -50,7 +48,13 @@ const mapStateToProps = state =>({
 
 }
 )
+const mapDispatchToProps = ({
+    searchMovie,
+    fetchMovies,
+    setLoading
+
+});
 
 
-export default connect(mapStateToProps,{searchMovie,fetchMovies,setLoading,getMovies})(SearchField)
+export default connect(mapStateToProps,mapDispatchToProps)(SearchField)
 

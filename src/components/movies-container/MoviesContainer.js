@@ -6,7 +6,7 @@ import MovieCard from "../movie-card/MovieCard";
 import Pagination from "../pagination/Pagination"
 
 import './MoviesContainer.scss';
-import SearchField from "../search-field/SearchField";
+import {DarkThemeContext} from "../../App";
 
 class MoviesContainer extends Component {
 
@@ -61,12 +61,18 @@ class MoviesContainer extends Component {
         }
     }
 
+
     render() {
         const {movies} = this.props;
         const {isLoading, error} = this.state;
         const movieNumberPages = Math.floor(this.state.movieTotalResults / 20);
         return (
-            <div className="movie-container">
+             <DarkThemeContext.Consumer>
+                 {
+                     (data)=>{
+                         return(
+                              <div className={`movie-container ${data.isDarkTheme && 'dark'}`}>
+
                 {
                     isLoading && (
                         <div className="text-center m-2">
@@ -95,12 +101,19 @@ class MoviesContainer extends Component {
                         currentPage={this.state.movieCurrentPage}/>
                 }
             </div>
+                         )
+                     }
+                 }
+
+
+             </DarkThemeContext.Consumer>
         );
     }
 }
 
 const mapStateToProps = state => ({
     movies: state.movies.movies,
+        text: state.movies.text,
 
 })
 
@@ -110,3 +123,4 @@ const mapDispatchToProps = ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(MoviesContainer);
+

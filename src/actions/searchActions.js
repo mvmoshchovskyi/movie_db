@@ -33,10 +33,4 @@ export const setLoading = () => {
     }
 }
 
-// export const getMovies = (movie) => {
-//     return {
-//         type: GET_MOVIES,
-//             payload: movie
-//     }
-// };
 

@@ -7,6 +7,7 @@ import MoviesContainer from "./components/movies-container/MoviesContainer";
 
 class MainPage extends Component {
 
+
     render() {
 
         return (
