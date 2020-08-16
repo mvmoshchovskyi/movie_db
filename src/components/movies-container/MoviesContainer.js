@@ -20,13 +20,21 @@ static contextType=DarkThemeContext
     }
 
         componentDidMount() {
-            this.loadMovies();
+
+   const {text} = this.props;
+  if (!text.length ){
+      this.loadMovies()
+  }
+
         }
+
+
 
     loadMovies = async () => {
 
         const {getMovies} = this.props;
         this.setState({isLoading: true});
+
         let response = await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}`);
         if (response.ok) {
             let json = await response.json();

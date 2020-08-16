@@ -9,7 +9,7 @@ export class DarkThemeContextWrapper extends Component {
     toggleTheme = () => this.setState({isDarkThemeOn: !this.state.isDarkThemeOn})
 
     render() {
-        debugger
+
         const {children} = this.props
         return (
             <DarkThemeContext.Provider value={{

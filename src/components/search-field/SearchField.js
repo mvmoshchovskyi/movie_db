@@ -7,12 +7,14 @@ class SearchField extends Component{
 
     onChange = e =>{
         this.props.searchMovie(e.target.value)
+
     }
 
     onSubmit = e =>{
 
         e.preventDefault()
         this.props.fetchMovies(this.props.text)
+
         this.props.setLoading()
     }
 

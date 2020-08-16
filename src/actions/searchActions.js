@@ -10,6 +10,7 @@ export const searchMovie = text => dispatch => {
     })
 }
 
+
 export const fetchMovies = text => {
     return (dispatch) => {
         return fetch(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${text}`)
@@ -18,6 +19,7 @@ export const fetchMovies = text => {
                     dispatch({
                         type: FETCH_MOVIES,
                         payload: data.results
+
                     })
                 })
             )
