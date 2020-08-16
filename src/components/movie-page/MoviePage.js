@@ -4,7 +4,7 @@ import {Button} from 'semantic-ui-react';
 import {withRouter} from 'react-router';
 import './MoviePage.scss';
 import {Link} from "react-router-dom";
-import {DarkThemeContext} from "../../App";
+import {DarkThemeContext} from "../../context/DarkThemeContext";
 
 function MoviePageComponent({match: {params: {id}}, movieFromId, getMovieFromId, movieFromId: {vote_average}}) {
 

@@ -6,10 +6,11 @@ import MovieCard from "../movie-card/MovieCard";
 import Pagination from "../pagination/Pagination"
 
 import './MoviesContainer.scss';
-import {DarkThemeContext} from "../../App";
+import {DarkThemeContext} from "../../context/DarkThemeContext";
 
 class MoviesContainer extends Component {
 
+static contextType=DarkThemeContext
 
     state = {
         isLoading: false,
@@ -66,12 +67,15 @@ class MoviesContainer extends Component {
         const {movies} = this.props;
         const {isLoading, error} = this.state;
         const movieNumberPages = Math.floor(this.state.movieTotalResults / 20);
+
+        const darkThemeContextValue=this.context
+
         return (
              <DarkThemeContext.Consumer>
                  {
                      (data)=>{
                          return(
-                              <div className={`movie-container ${data.isDarkTheme && 'dark'}`}>
+                              <div className={`movie-container ${darkThemeContextValue.isDarkTheme && 'dark'}`}>
 
                 {
                     isLoading && (

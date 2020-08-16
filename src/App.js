@@ -7,14 +7,15 @@ import './App.css';
 import store from "./store/store";
 import {Header} from "./components/header/Header";
 import {Footer} from "./components/footer/Footer";
+import {DarkThemeContextWrapper} from "./context/DarkThemeContextWrapper";
+import {DarkThemeContext,isDarkTheme} from "./context/DarkThemeContext";
 
-const isDarkTheme = true
-export const DarkThemeContext = createContext({isDarkTheme})
+
 
 export class App extends Component {
     render() {
         return (
-     <DarkThemeContext.Provider value={{isDarkTheme}}>
+     <DarkThemeContextWrapper>
                 <Provider store={store}>
                     <Router>
                         <div>
@@ -24,7 +25,7 @@ export class App extends Component {
                         </div>
                     </Router>
                 </Provider>
- </DarkThemeContext.Provider>
+     </DarkThemeContextWrapper>
         );
     }
 }

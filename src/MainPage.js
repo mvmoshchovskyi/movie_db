@@ -4,14 +4,14 @@ import Landing from "./components/landing/Landing";
 import MoviePage from "./containers/MoviePage";
 import MoviesContainer from "./components/movies-container/MoviesContainer";
 
-
+import './MainPage.scss'
 class MainPage extends Component {
 
 
     render() {
 
         return (
-            <div>
+            <div className='main'>
                 <Router>
                     <Switch>
                         <Route exact path="/" component={Landing}/>
